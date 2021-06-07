@@ -1,0 +1,3 @@
+[submodule "SuisHook/IniReader"]
+	path = SuisHook/IniReader
+	url = git://github.com/ThirteenAG/IniReader.git
