@@ -1,0 +1,9 @@
+.vs/*
+SuisHook/Debug/*
+SuisHook/Release/*
+
+*.iobj
+*.ipdb
+*.7z
+*.zip
+*.rar
