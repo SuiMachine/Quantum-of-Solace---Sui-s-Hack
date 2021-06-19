@@ -27,7 +27,8 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 #if _DEBUG
             MessageBox(NULL, L"Stop", L"Stop", 0);
 #endif
-            hook = new SuiHook();
+            hook = SuiHook::getInstance();
+            hook->Hook();
         }
     }
     case DLL_THREAD_ATTACH:
