@@ -10,6 +10,7 @@ public:
 	bool Windowed;
 	float DesiredFOV;
 	int DesiredFPS;
+	bool FPSHack;
 	HMODULE jb_sp_s;
 private:
 	SuiHook();

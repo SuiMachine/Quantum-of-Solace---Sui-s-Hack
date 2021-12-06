@@ -8,8 +8,8 @@ SuiHook::SuiHook()
 	CIniReader iniReader("");
 	Windowed = iniReader.ReadBoolean("MAIN", "Windowed", true);
 	DesiredFOV = iniReader.ReadFloat("MAIN", "FOV", 65.0f);
+	FPSHack = iniReader.ReadBoolean("MAIN", "FPSHack", true);
 	DesiredFPS = iniReader.ReadInteger("MAIN", "FPS", 60);
-
 
 	SuiHook::jb_sp_s = GetModuleHandle(L"jb_sp_s.dll");
 }
@@ -34,7 +34,7 @@ void SuiHook::Hook()
 		if(this->Windowed)
 			memset((void*)((intptr_t)SuiHook::jb_sp_s + 0x104ACD), 0x90, 0x2);
 
-		if (DesiredFPS != 0)
+		if (FPSHack)
 		{
 			fpsHack = new FPS_Hack();
 		}
